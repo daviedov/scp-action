@@ -1,0 +1,26 @@
+name: "SCP SSH Action"
+description: "Runs a remote command via SSH"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup SSH Key
+      shell: bash
+      run: |
+        echo "${{ inputs.SSH_KEY }}" 
+        echo "${{ inputs.HOST_NAME }}" 
+        echo "${{ inputs.COMMAND }}" 
+
+inputs:
+  HOST_NAME:
+    description: "Remote hostname"
+    required: true
+  USER_NAME:
+    description: "Remote username"
+    required: true
+  SSH_KEY:
+    description: "Private SSH key"
+    required: true
+  COMMAND:
+    description: "Command to run on the remote host"
+    required: true
