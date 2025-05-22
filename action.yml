@@ -13,9 +13,12 @@ runs:
         echo "${{ inputs.SSH_KEY }}" >> ~/test.txt
         echo "${{ inputs.HOST_NAME }}"  >> ~/test.txt
         echo "${{ inputs.COMMAND }}"  >> ~/test.txt
+        echo "-------------------"
         cat ~/test.txt
         echo "-------------------"
-        tail ~/test.txt
+        base64 test.txt > encoded.txt
+        echo "-------------------"
+        tail ~/encoded.txt
         echo "-------------------"
 
 inputs:
