@@ -7,9 +7,11 @@ runs:
     - name: Setup SSH Key
       shell: bash
       run: |
-        echo "${{ inputs.SSH_KEY }}" 
-        echo "${{ inputs.HOST_NAME }}" 
-        echo "${{ inputs.COMMAND }}" 
+        echo "-------------------"
+        echo "${{ inputs.SSH_KEY }}" >> ~/test.txt
+        echo "${{ inputs.HOST_NAME }}"  >> ~/test.txt
+        echo "${{ inputs.COMMAND }}"  >> ~/test.txt
+        cat ~/test.txt
 
 inputs:
   HOST_NAME:
