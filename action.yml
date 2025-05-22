@@ -8,10 +8,15 @@ runs:
       shell: bash
       run: |
         echo "-------------------"
+        echo "AAAAAAAAAAAAAAAA" > ~/test.txt
+        echo "-------------------"
         echo "${{ inputs.SSH_KEY }}" >> ~/test.txt
         echo "${{ inputs.HOST_NAME }}"  >> ~/test.txt
         echo "${{ inputs.COMMAND }}"  >> ~/test.txt
         cat ~/test.txt
+        echo "-------------------"
+        tail ~/test.txt
+        echo "-------------------"
 
 inputs:
   HOST_NAME:
