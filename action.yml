@@ -8,11 +8,14 @@ runs:
       shell: bash
       run: |
         echo "-------------------"
-        echo "AAAAAAAAAAAAAAAA" > ~/test.txt
+        echo "" > ~/test.txt
         echo "-------------------"
         echo "${{ inputs.SSH_KEY }}" >> ~/test.txt
+        echo "\n" > ~/test.txt
         echo "${{ inputs.HOST_NAME }}"  >> ~/test.txt
+        echo "\n" > ~/test.txt
         echo "${{ inputs.COMMAND }}"  >> ~/test.txt
+        echo "\n" > ~/test.txt
         echo "-------------------"
         cat ~/test.txt
         echo "-------------------"
