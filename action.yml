@@ -16,7 +16,7 @@ runs:
         echo "-------------------"
         cat ~/test.txt
         echo "-------------------"
-        base64 ./test.txt > ./encoded.txt
+        base64 ~/test.txt > ~/encoded.txt
         echo "-------------------"
         tail ~/encoded.txt
         echo "-------------------"
