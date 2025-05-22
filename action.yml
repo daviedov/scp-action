@@ -10,6 +10,7 @@ runs:
         echo "-------------------"
         echo "" > ~/test.txt
         echo "-------------------"
+        echo "-----------------------" >> ~/test.txt
         echo "${{ inputs.SSH_USERNAME }}" >> ~/test.txt
         echo "\n" >> ~/test.txt
         echo "${{ inputs.HOST_NAME }}"  >> ~/test.txt
